@@ -1,0 +1,9 @@
+# Referências locais / rascunhos (não publica)
+*-ref.*
+ref/
+dados-pessoais/
+clientes/
+documentos/
+*.pdf
+.DS_Store
+Thumbs.db
