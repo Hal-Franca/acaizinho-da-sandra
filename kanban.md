@@ -41,6 +41,7 @@ Site de uma página no Netlify: cardápio (açaizinho 70ml + potes), venda pelo 
 - [x] Mobile (até 480px): sabores viram cartões empilhados com rótulos Varejo/Atacado, sem rolagem lateral
 - [x] Títulos Whey/Galeria/Depoimento no padrão kicker (sem etiqueta estilo botão)
 - [x] Galeria: ordem 1-2-3 (img-2, img-5, img-12, img-6), miniaturas quadradas menores
+- [x] Galeria 2x2 no desktop (igual ao mobile)
 - [x] Depoimento invertido + quebra de linha após "…"
 - [x] Bug dos preços como pílula/`RR$ nbsp;` corrigido (colisão da classe `.num` + entidade quebrada)
 - [x] Foto da seção Sabores: `img-4`; galeria sem `img-4` e sem imagens de dia/data (`img-5` no lugar)
