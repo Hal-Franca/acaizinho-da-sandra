@@ -2,23 +2,15 @@
 
 Site de uma página no Netlify: cardápio (açaizinho 70ml + potes), venda pelo WhatsApp.
 
-## Todo (a fazer)
-
-- [ ] Trocar foto da seção Sabores pela arte corrigida de 8 sabores (sem o palito roxo repetido) — temporariamente usando `img-3.jpeg`
-- [ ] Publicar no Netlify (arrastar pasta em `app.netlify.com/drop` ou conectar repo)
-- [ ] Corrigir `og:image` para URL absoluta após publicar (preview no WhatsApp/Instagram)
-- [ ] Backlog: montador de pedido simples (sabores + quantidades gerando mensagem do WhatsApp)
-- [ ] Backlog: foto real da Sandra/produção
-- [ ] Backlog: atualizar imagens (arte corrigida de 8 sabores entra aqui também)
-- [ ] Registrar domínio próprio (opcional)
-
 ## Fora do escopo (decisão da Sandra)
-
 - Horário de funcionamento no site (pedidos combinados no WhatsApp)
+- Foto real da Sandra/produção (cliente prefere manter a foto atual gerada por IA)
+
+## Todo (a fazer)
+- (nada no momento)
 
 ## Doing (fazendo)
-
-- (nada no momento)
+- Cardápio de montagem do pedido (#pedido) com envio ao WhatsApp (investigando `*` na mensagem gerada)
 
 ## Done (pronto)
 
@@ -48,3 +40,4 @@ Site de uma página no Netlify: cardápio (açaizinho 70ml + potes), venda pelo 
 - [x] Títulos com etiqueta inline: Whey e Galeria economizando espaço vertical
 - [x] `netlify.toml`, `.gitignore`, `README.md`
 - [x] Repo público no GitHub: https://github.com/Hal-Franca/acaizinho-da-sandra (branches `prod`, `staging`, `dev`; `prod` é a principal)
+- [x] Seção Monte seu pedido (#pedido): 8 sabores + 4 potes com quantidades, nome/bairro/pagamento/obs, gera mensagem pronta no WhatsApp sem total estimado

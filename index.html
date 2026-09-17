@@ -71,7 +71,7 @@
   .kicker{color:var(--pink);font-weight:800;text-transform:uppercase;font-size:.78rem;letter-spacing:1px}
   .tag{display:inline-block;font-size:.75rem;font-weight:800;padding:4px 10px;border-radius:999px;margin-bottom:8px}
   .tag.main{background:var(--acai);color:#fff} .tag.pink{background:var(--pink);color:#fff} .tag.teal{background:var(--teal);color:#fff} .tag.sec{background:var(--rosa-acai);color:var(--acai);border:1px solid #E4BFD5}
-  .photo-img{display:block;width:100%;max-width:460px;margin:0 auto;border-radius:16px;box-shadow:0 6px 24px rgba(91,31,77,.18)}
+  .photo-img{display:block;width:100%;height:auto;max-width:460px;margin:0 auto;border-radius:16px;box-shadow:0 6px 24px rgba(91,31,77,.18)}
   .photo-cap{text-align:center;margin-top:8px}
   /* Listas de preço (grid, layout garantido em todo navegador) */
   .tabela-scroll{overflow-x:auto;margin:12px -6px 0;padding:0 6px 4px;-webkit-overflow-scrolling:touch}
@@ -97,7 +97,7 @@
   .grid2{display:grid;grid-template-columns:1fr;gap:14px}
   @media(min-width:760px){.grid2{grid-template-columns:1fr 1fr} h1{font-size:2.3rem}}
   .whey{display:grid;grid-template-columns:1fr;gap:16px;align-items:center}
-  @media(min-width:760px){.whey{grid-template-columns:300px 1fr}}
+  @media(min-width:760px){.whey{grid-template-columns:300px 1fr;gap:28px}}
   .whey ul{list-style:none;padding:0;margin-top:10px}
   .whey ul li{margin:8px 0;padding-left:4px}
   .galeria{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
@@ -115,6 +115,25 @@
   footer{background:var(--fundo-escuro);color:#fff;padding:32px 0;text-align:center}
   .small{font-size:.88rem;color:var(--cinza)} footer .small{color:#E9CBDF}
   .float-zap{position:fixed;left:16px;bottom:16px;background:var(--verde);color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+  .pedido-sub{font-size:.95rem;margin-top:6px}
+  .pedido-grupo{margin-top:16px}
+  .pedido-grupo h3{color:var(--acai);font-size:1.05rem;margin-bottom:8px}
+  .pedido-lista{display:grid;gap:8px}
+  @media(min-width:760px){.pedido-lista{grid-template-columns:1fr 1fr}}
+  .pedido-item{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#FFF5FA;border:1px solid #F1E2EC;border-radius:12px;padding:10px 12px}
+  .pedido-item .nome{font-weight:700;font-size:.95rem}
+  .pedido-item .nome small{display:block;font-weight:400;color:var(--cinza);font-size:.82rem}
+  .qtd{display:flex;align-items:center;gap:8px}
+  .qtd button{width:32px;height:32px;border-radius:50%;border:1px solid #E4BFD5;background:#fff;color:var(--pink-esc);font-size:1.1rem;font-weight:800;cursor:pointer;line-height:1}
+  .qtd button:hover{background:var(--rosa-acai)}
+  .qtd input{width:46px;text-align:center;font-weight:800;color:var(--acai);border:1px solid #E4BFD5;border-radius:8px;padding:6px 4px;font-size:1rem;font-family:inherit;background:#fff}
+  .qtd input::-webkit-outer-spin-button,.qtd input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+  .qtd input[type=number]{-moz-appearance:textfield;appearance:textfield}
+  .pedido-campos{display:grid;gap:10px;margin-top:16px}
+  .pedido-campos label{font-weight:700;font-size:.9rem;color:var(--acai)}
+  .pedido-campos input,.pedido-campos select,.pedido-campos textarea{width:100%;margin-top:4px;padding:12px;border-radius:12px;border:1px solid #E4BFD5;font-family:inherit;font-size:1rem;background:#fff;color:var(--texto)}
+  .pedido-campos select{padding-right:40px;appearance:none;-webkit-appearance:none;-moz-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%235B1F4D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:12px 8px}
+  .pedido-campos textarea{min-height:70px;resize:vertical}
   /* Tablet */
   @media(max-width:760px){
     h1{font-size:1.8rem}
@@ -148,12 +167,12 @@
 </head>
 <body>
 <nav class="top"><div class="wrap">
-  <a class="brand" href="#topo"><img src="assets/img/logo.webp" alt="Logo Acaízinho da Sandra"> Acaízinho da Sandra</a>
-  <div><a class="link" href="#sabores">Sabores</a><a class="link" href="#potes">Potes</a><a class="link" href="#whey">Whey</a><a class="link" href="#contato">Contato</a></div>
+  <a class="brand" href="#topo"><img src="assets/img/logo.webp" alt="Logo Acaízinho da Sandra" width="512" height="512"> Acaízinho da Sandra</a>
+  <div><a class="link" href="#sabores">Sabores</a><a class="link" href="#potes">Potes</a><a class="link" href="#pedido">Pedir</a><a class="link" href="#contato">Contato</a></div>
 </div></nav>
 
 <header class="hero" id="topo"><div class="wrap">
-  <img class="logo-hero" src="assets/img/logo.webp" alt="Açaizinho da Sandra - açaizinho cremoso 70ml em vários sabores" fetchpriority="high">
+  <img class="logo-hero" src="assets/img/logo.webp" alt="Açaizinho da Sandra - açaizinho cremoso 70ml em vários sabores" width="512" height="512" fetchpriority="high">
   <br><span class="pill">🍧 Cremoso • Prático • Irresistível</span>
   <h1>Acaízinho da Sandra: <span class="gold">pequeno no tamanho, gigante no sabor</span></h1>
   <p class="sub">Açaizinho cremoso de 70ml em 8 sabores + açaí no pote para a família toda. Varejo e atacado.</p>
@@ -168,7 +187,7 @@
 <section><div class="wrap"><div class="card">
   <div class="kicker">Sobre</div>
   <h2>Olá, aqui é a Sandra 💜</h2>
-  <img class="photo-img" src="assets/img/img-11.jpeg" alt="Sandra, do Acaízinho da Sandra, comemorando com açaí" loading="lazy">
+  <img class="photo-img" src="assets/img/img-11.webp" alt="Sandra, do Acaízinho da Sandra, comemorando com açaí" width="768" height="958" loading="lazy" decoding="async">
   <p class="photo-cap small">Alegria de quem faz açaí com amor 😄</p>
   <p style="margin-top:12px">Aqui no <strong>Acaízinho da Sandra</strong> o açaí é cremoso, bem servido e feito com capricho. O <strong>açaizinho de 70ml</strong> é prático e geladinho, perfeito para qualquer hora, e os <strong>potes de 2L, 5L e 10L</strong> são ideais para a família, festas e para revender.</p>
   <p class="small">Sem glúten e sem gordura trans. Tem opção zero açúcar e opção com whey protein. Pedidos pelo WhatsApp.</p>
@@ -179,7 +198,7 @@
     <div class="kicker">Cardápio • Açaizinho 70ml</div>
     <h2>8 sabores para escolher</h2>
     <!-- TEMPORÁRIO: img-1 (todos os sabores) tem 9 palitos com o roxo repetido. Trocar pela arte corrigida de 8 sabores quando chegar. -->
-    <img class="photo-img" src="assets/img/img-4.jpeg" alt="Eu sei que você quer um açaizinho tradicional cremoso" loading="lazy">
+    <img class="photo-img" src="assets/img/img-4.webp" alt="Eu sei que você quer um açaizinho tradicional cremoso" width="768" height="764" loading="lazy" decoding="async">
     <div class="tabela-scroll">
       <div class="plist" role="table" aria-label="Preços do açaizinho 70ml">
         <div class="prow phead" role="row"><span role="columnheader">Sabor</span><span role="columnheader" class="vlr">Varejo (un.)</span><span role="columnheader" class="vlr">Atacado (12 un.)</span></div>
@@ -204,7 +223,7 @@
   <div class="card">
     <div class="kicker">Cardápio • Potes para a família</div>
     <h2>Açaí no pote</h2>
-    <img class="photo-img" src="assets/img/acai-pote.jpeg" alt="Caixas de açaí Açaizinho: 2L, 5L e 10L tradicional e 2L zero" loading="lazy">
+    <img class="photo-img" src="assets/img/acai-pote.webp" alt="Caixas de açaí Açaizinho: 2L, 5L e 10L tradicional e 2L zero" width="768" height="988" loading="lazy" decoding="async">
     <div class="tabela-scroll">
       <div class="plist teal" role="table" aria-label="Preços dos potes de açaí">
         <div class="prow potes phead" role="row"><span role="columnheader">Pote</span><span role="columnheader" class="vlr">Preço</span></div>
@@ -226,7 +245,7 @@
     <div class="kicker">Diferencial • Para quem treina</div>
     <h2>💪 Açaizinho com Whey Protein</h2>
     <div class="whey">
-      <img class="photo-img" src="assets/img/whey-protein.jpeg" alt="Açaizinho com whey protein: 10g de proteína e 76 calorias por unidade" loading="lazy">
+      <img class="photo-img" src="assets/img/whey-protein.webp" alt="Açaizinho com whey protein: 10g de proteína e 76 calorias por unidade" width="768" height="860" loading="lazy" decoding="async">
       <div>
         <p>Energia, proteína e muito sabor no seu <strong>pós-treino</strong>, sem abrir mão do açaí cremoso que você ama.</p>
         <ul>
@@ -244,15 +263,56 @@
   </div>
 </div></section>
 
+<section id="pedido"><div class="wrap">
+  <div class="card">
+    <div class="kicker">Monte seu pedido</div>
+    <h2>Escolha e chame no WhatsApp</h2>
+    <p class="pedido-sub">Toque em + para somar as quantidades. No final, o botão monta sua mensagem pronta para enviar. Sem valor final aqui no site, o valor é confirmado com você no WhatsApp.</p>
+    <div class="pedido-grupo">
+      <h3>Açaizinho 70ml (unidades)</h3>
+      <div class="pedido-lista" id="lista-sabores">
+        <div class="pedido-item" data-nome="Tradicional"><div class="nome">Tradicional<small>açaí, banana e guaraná</small></div><div class="qtd"><button type="button" data-acao="menos" aria-label="Diminuir">-</button><input type="number" min="0" max="99" value="0" inputmode="numeric" aria-label="Quantidade"><button type="button" data-acao="mais" aria-label="Aumentar">+</button></div></div>
+        <div class="pedido-item" data-nome="Zero"><div class="nome">Zero<small>zero açúcar</small></div><div class="qtd"><button type="button" data-acao="menos" aria-label="Diminuir">-</button><input type="number" min="0" max="99" value="0" inputmode="numeric" aria-label="Quantidade"><button type="button" data-acao="mais" aria-label="Aumentar">+</button></div></div>
+        <div class="pedido-item" data-nome="Moranguinho"><div class="nome">Moranguinho</div><div class="qtd"><button type="button" data-acao="menos" aria-label="Diminuir">-</button><input type="number" min="0" max="99" value="0" inputmode="numeric" aria-label="Quantidade"><button type="button" data-acao="mais" aria-label="Aumentar">+</button></div></div>
+        <div class="pedido-item" data-nome="Mousse de Maracujá"><div class="nome">Mousse de Maracujá</div><div class="qtd"><button type="button" data-acao="menos" aria-label="Diminuir">-</button><input type="number" min="0" max="99" value="0" inputmode="numeric" aria-label="Quantidade"><button type="button" data-acao="mais" aria-label="Aumentar">+</button></div></div>
+        <div class="pedido-item" data-nome="Paçoca"><div class="nome">Paçoca</div><div class="qtd"><button type="button" data-acao="menos" aria-label="Diminuir">-</button><input type="number" min="0" max="99" value="0" inputmode="numeric" aria-label="Quantidade"><button type="button" data-acao="mais" aria-label="Aumentar">+</button></div></div>
+        <div class="pedido-item" data-nome="Mousse de Limão"><div class="nome">Mousse de Limão</div><div class="qtd"><button type="button" data-acao="menos" aria-label="Diminuir">-</button><input type="number" min="0" max="99" value="0" inputmode="numeric" aria-label="Quantidade"><button type="button" data-acao="mais" aria-label="Aumentar">+</button></div></div>
+        <div class="pedido-item" data-nome="Beijinho de Coco"><div class="nome">Beijinho de Coco</div><div class="qtd"><button type="button" data-acao="menos" aria-label="Diminuir">-</button><input type="number" min="0" max="99" value="0" inputmode="numeric" aria-label="Quantidade"><button type="button" data-acao="mais" aria-label="Aumentar">+</button></div></div>
+        <div class="pedido-item" data-nome="Whey Protein"><div class="nome">Whey Protein<small>10g de proteína</small></div><div class="qtd"><button type="button" data-acao="menos" aria-label="Diminuir">-</button><input type="number" min="0" max="99" value="0" inputmode="numeric" aria-label="Quantidade"><button type="button" data-acao="mais" aria-label="Aumentar">+</button></div></div>
+      </div>
+    </div>
+    <div class="pedido-grupo">
+      <h3>Potes</h3>
+      <div class="pedido-lista" id="lista-potes">
+        <div class="pedido-item" data-nome="Pote Tradicional 2L"><div class="nome">Tradicional 2L</div><div class="qtd"><button type="button" data-acao="menos" aria-label="Diminuir">-</button><input type="number" min="0" max="99" value="0" inputmode="numeric" aria-label="Quantidade"><button type="button" data-acao="mais" aria-label="Aumentar">+</button></div></div>
+        <div class="pedido-item" data-nome="Pote Tradicional 5L"><div class="nome">Tradicional 5L</div><div class="qtd"><button type="button" data-acao="menos" aria-label="Diminuir">-</button><input type="number" min="0" max="99" value="0" inputmode="numeric" aria-label="Quantidade"><button type="button" data-acao="mais" aria-label="Aumentar">+</button></div></div>
+        <div class="pedido-item" data-nome="Pote Tradicional 10L"><div class="nome">Tradicional 10L</div><div class="qtd"><button type="button" data-acao="menos" aria-label="Diminuir">-</button><input type="number" min="0" max="99" value="0" inputmode="numeric" aria-label="Quantidade"><button type="button" data-acao="mais" aria-label="Aumentar">+</button></div></div>
+        <div class="pedido-item" data-nome="Pote Zero 2L"><div class="nome">Zero 2L<small>zero açúcar</small></div><div class="qtd"><button type="button" data-acao="menos" aria-label="Diminuir">-</button><input type="number" min="0" max="99" value="0" inputmode="numeric" aria-label="Quantidade"><button type="button" data-acao="mais" aria-label="Aumentar">+</button></div></div>
+      </div>
+    </div>
+    <div class="pedido-campos">
+      <div><label for="ped-nome">Seu nome</label><input id="ped-nome" type="text" placeholder="Ex: Maria" autocomplete="name"></div>
+      <div><label for="ped-bairro">Bairro (para entrega ou retirada)</label><input id="ped-bairro" type="text" placeholder="Ex: Centro, quero entrega"></div>
+      <div><label for="ped-pagto">Pagamento</label><select id="ped-pagto"><option value="Combinar">Combinar no WhatsApp</option><option value="Pix">Pix</option><option value="Dinheiro">Dinheiro</option></select></div>
+      <div><label for="ped-obs">Observação (opcional)</label><textarea id="ped-obs" placeholder="Ex: caixa mista, horário para receber"></textarea></div>
+    </div>
+    <div class="cta-row" style="justify-content:flex-start">
+      <a class="btn btn-zap" href="#" id="btn-enviar-pedido" target="_blank" rel="noopener">Enviar pedido no WhatsApp</a>
+      <a class="btn btn-ghost" href="#" id="btn-limpar-pedido">Limpar</a>
+    </div>
+    <p class="small" style="margin-top:8px">Atacado em caixa com 12 unidades. Se misturar sabores, o valor pode variar um pouco e é confirmado no WhatsApp.</p>
+  </div>
+</div></section>
+
 <section><div class="wrap">
   <div class="card">
     <div class="kicker">Galeria</div>
     <h2>📸 Direto do nosso Instagram</h2>
     <div class="galeria">
-      <img src="assets/img/img-2.jpeg" alt="Açaizinho tradicional cremoso e irresistível" loading="lazy">
-      <img src="assets/img/img-5.jpeg" alt="Açaizinhos cremosos com cesta de frutos de açaí" loading="lazy">
-      <img src="assets/img/img-12.jpeg" alt="Açaizinho refrescante para os dias de calor" loading="lazy">
-      <img src="assets/img/img-6.jpeg" alt="Já pegou o seu açaizinho hoje?" loading="lazy">
+      <img src="assets/img/img-2.webp" alt="Açaizinho tradicional cremoso e irresistível" width="768" height="956" loading="lazy" decoding="async">
+      <img src="assets/img/img-5.webp" alt="Açaizinhos cremosos com cesta de frutos de açaí" width="768" height="812" loading="lazy" decoding="async">
+      <img src="assets/img/img-12.webp" alt="Açaizinho refrescante para os dias de calor" width="768" height="1390" loading="lazy" decoding="async">
+      <img src="assets/img/img-6.webp" alt="Já pegou o seu açaizinho hoje?" width="768" height="734" loading="lazy" decoding="async">
     </div>
     <p class="small" style="margin-top:8px">Veja muito mais em <a href="https://www.instagram.com/acaizinhodasandra/" target="_blank" rel="noopener">@acaizinhodasandra</a></p>
   </div>
@@ -267,7 +327,7 @@
         “Gostei muito e já mostrei pra minha nora…<br>Pessoal da academia vai amar.”
         <footer>• Cliente verificado • Agosto/26</footer>
       </blockquote>
-      <img class="photo-img" src="assets/img/testimonial-2.jpeg" alt="Depoimento de cliente: gostei muito, pessoal da academia vai amar" loading="lazy">
+      <img class="photo-img" src="assets/img/testimonial-2.webp" alt="Depoimento de cliente: gostei muito, pessoal da academia vai amar" width="640" height="640" loading="lazy" decoding="async">
     </div>
     <div class="cta-row" style="justify-content:flex-start">
       <a class="btn btn-zap" href="https://wa.me/5533999919339?text=Ol%C3%A1!%20Vi%20os%20depoimentos%20e%20quero%20provar%20o%20a%C3%A7a%C3%AD" target="_blank" rel="noopener">Quero provar também</a>
@@ -286,7 +346,7 @@
       <div class="step"><div class="num">4</div><div><strong>Receba geladinho</strong><br><span class="small">E marca a gente no Instagram 😋</span></div></div>
     </div>
     <div class="cta-row" style="justify-content:flex-start">
-      <a class="btn btn-zap" href="https://wa.me/5533999919339?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20no%20Aca%C3%ADzinho%20da%20Sandra" target="_blank" rel="noopener">Fazer pedido</a>
+      <a class="btn btn-zap" href="#pedido">Montar meu pedido</a>
     </div>
   </div>
   <div class="card">
@@ -320,5 +380,62 @@
   <span class="small">Pequeno no tamanho, gigante no sabor. Preços sujeitos a alteração. Consulte disponibilidade.</span>
 </div></footer>
 <a class="float-zap" href="https://wa.me/5533999919339?text=Ol%C3%A1!%20Quero%20pedir%20no%20Aca%C3%ADzinho%20da%20Sandra." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 448 512" width="28" height="28" fill="#fff" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></a>
+<script>
+(function(){
+  var ZAP = "5533999919339";
+  function getQtd(item){ var v = parseInt(item.querySelector("input").value, 10); return isNaN(v) ? 0 : v; }
+  function setQtd(item, v){ if(v < 0) v = 0; if(v > 99) v = 99; item.querySelector("input").value = v; }
+  document.querySelectorAll("#pedido .pedido-item").forEach(function(item){
+    var menos = item.querySelector('[data-acao="menos"]');
+    var mais = item.querySelector('[data-acao="mais"]');
+    menos.addEventListener("click", function(){ setQtd(item, getQtd(item) - 1); });
+    mais.addEventListener("click", function(){ setQtd(item, getQtd(item) + 1); });
+    item.querySelector("input").addEventListener("change", function(){ setQtd(item, getQtd(item)); });
+  });
+  function coletar(id){
+    var out = [];
+    document.querySelectorAll("#" + id + " .pedido-item").forEach(function(item){
+      var q = getQtd(item);
+      if(q > 0) out.push(q + "x " + item.getAttribute("data-nome"));
+    });
+    return out;
+  }
+  document.getElementById("btn-limpar-pedido").addEventListener("click", function(e){
+    e.preventDefault();
+    document.querySelectorAll("#pedido .pedido-item input").forEach(function(s){ s.value = "0"; });
+    document.getElementById("ped-nome").value = "";
+    document.getElementById("ped-bairro").value = "";
+    document.getElementById("ped-pagto").value = "Combinar";
+    document.getElementById("ped-obs").value = "";
+  });
+  document.getElementById("btn-enviar-pedido").addEventListener("click", function(e){
+    var sabores = coletar("lista-sabores");
+    var potes = coletar("lista-potes");
+    if(sabores.length === 0 && potes.length === 0){
+      e.preventDefault();
+      alert("Escolha ao menos 1 item para montar seu pedido.");
+      return;
+    }
+    function limpar(s){ return ((s || "").replace(/[*_~`>|]/g, "").replace(/[\r\n]+/g, " ")).trim().replace(/\s+/g, " ").slice(0, 200); }
+    var nome = limpar(document.getElementById("ped-nome").value);
+    var bairro = limpar(document.getElementById("ped-bairro").value);
+    var pagto = document.getElementById("ped-pagto").value;
+    var obs = limpar(document.getElementById("ped-obs").value);
+    var partes = ["Ola! Quero fazer um pedido no Acaizinho da Sandra."];
+    function numerar(lista){ return lista.map(limpar).map(function(s, i){ return (i + 1) + ") " + s; }).join("\n"); }
+    if(sabores.length > 0){ partes.push("Acaizinhos 70ml:\n" + numerar(sabores)); }
+    if(potes.length > 0){ partes.push("Potes:\n" + numerar(potes)); }
+    if(nome){ partes.push("Nome: " + nome); }
+    if(bairro){ partes.push("Entrega/retirada: " + bairro); }
+    partes.push("Pagamento: " + pagto);
+    if(obs){ partes.push("Obs: " + obs); }
+    var texto = partes.join("\n");
+    var url = "https://api.whatsapp.com/send?phone=" + ZAP + "&text=" + encodeURIComponent(texto).replace(/!/g, "%21").replace(/\*/g, "%2A").replace(/'/g, "%27").replace(/\(/g, "%28").replace(/\)/g, "%29");
+    console.log("[pedido] texto:", texto);
+    console.log("[pedido] url:", url);
+    this.href = url;
+  });
+})();
+</script>
 </body>
 </html>
