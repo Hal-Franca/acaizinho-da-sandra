@@ -46,4 +46,4 @@ Site de uma página no Netlify: cardápio (açaizinho 70ml + potes), venda pelo 
 - [x] Foto da seção Sabores: `img-4`; galeria sem `img-4` e sem imagens de dia/data (`img-5` no lugar)
 - [x] Títulos com etiqueta inline: Whey e Galeria economizando espaço vertical
 - [x] `netlify.toml`, `.gitignore`, `README.md`
-- [x] Repo público no GitHub: https://github.com/Hal-Franca/acaizinho-da-sandra
+- [x] Repo público no GitHub: https://github.com/Hal-Franca/acaizinho-da-sandra (branches `prod`, `staging`, `dev`; `prod` é a principal)
