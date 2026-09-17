@@ -1,9 +1,29 @@
 [build]
   publish = "."
 
+# So faz build de producao no branch principal (definido em Site settings).
+# Previews e deploys de outros branches sao ignorados para economizar minutos.
+[context.deploy-preview]
+  ignore = "exit 0"
+
+[context.branch-deploy]
+  ignore = "exit 0"
+
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Assets estaticos com cache longo: quem volta nao baixa de novo
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML sempre revalidado para buscar conteudo novo
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

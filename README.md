@@ -36,12 +36,12 @@ Ou conecte o repo GitHub no Netlify (sem comando de build, Publish directory: `.
 - Preços: tabelas em `index.html` (seções `#sabores` e `#potes`)
 - WhatsApp: trocar `5533999919339` nos links `wa.me/...`
 - Fotos: arquivos em `assets/img/` referenciados no HTML
-- Logo: `logo.webp` (web, 99KB) gerada de `logo.png` (master 768px, fundo transparente recortado de `logo-3.png`)
+- Logo: `logo.webp` (web, 512px) gerada de `logo.png` (master 768px, mantido no repo)
+- Fotos: `.webp` redimensionados (q78-85, largura max 768px); originais pesados removidos
 
-## Imagens de referência (não usadas no site)
+## Imagens (fontes e masters)
 
-- `tabela-de-precos.jpeg` — tabela antiga, mantida só como referência (preços atuais estão em HTML)
-- `logo-1.jpeg` / `logo-2.jpeg` — mesma logo em qualidade menor que `logo-3.png`
+- `logo.png` — master da logo (fundo transparente), mantido para regenerar `logo.webp`
 
 ## Links
 
